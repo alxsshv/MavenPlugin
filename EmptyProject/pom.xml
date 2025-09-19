@@ -8,32 +8,32 @@
     <artifactId>EmptyProject</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-<!--    <developers>-->
-<!--        <developer>-->
-<!--            <id>john.doe</id>-->
-<!--            <name>John Doe</name>-->
-<!--            <email>john.doe@example.com</email>-->
-<!--            <url>http://www.example.com</url>-->
-<!--            <organization>Example Corp</organization>-->
-<!--            <organizationUrl>http://www.example.com</organizationUrl>-->
-<!--            <roles>-->
-<!--                <role>architect</role>-->
-<!--                <role>developer</role>-->
-<!--            </roles>-->
-<!--            <timezone>+8</timezone>-->
-<!--            <properties>-->
-<!--                <picUrl>image/john_doe.png</picUrl>-->
-<!--            </properties>-->
-<!--        </developer>-->
-<!--        <developer>-->
-<!--            <id>jane.smith</id>-->
-<!--            <name>Jane Smith</name>-->
-<!--            <email>jane.smith@example.com</email>-->
-<!--            <roles>-->
-<!--                <role>tester</role>-->
-<!--            </roles>-->
-<!--        </developer>-->
-<!--    </developers>-->
+    <developers>
+        <developer>
+            <id>john.doe</id>
+            <name>John Doe</name>
+            <email>john.doe@example.com</email>
+            <url>http://www.example.com</url>
+            <organization>Example Corp</organization>
+            <organizationUrl>http://www.example.com</organizationUrl>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>+8</timezone>
+            <properties>
+                <picUrl>image/john_doe.png</picUrl>
+            </properties>
+        </developer>
+        <developer>
+            <id>jane.smith</id>
+            <name>Jane Smith</name>
+            <email>jane.smith@example.com</email>
+            <roles>
+                <role>tester</role>
+            </roles>
+        </developer>
+    </developers>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -49,7 +49,7 @@
                 <version>1.0</version>
                 <executions>
                     <execution>
-                        <phase>compile</phase>
+                        <phase>validate</phase>
                         <goals>
                             <goal>print</goal>
                         </goals>
@@ -58,4 +58,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
