@@ -10,6 +10,9 @@ import org.apache.maven.model.Developer;
  */
 public class DeveloperInfo {
     private static final String DEVELOPER_INFO_TEMPLATE = "%s email: %s, url: %s, organization: %s, roles: %s %s";
+
+    private static final String DEFAULT_FIELD_VALUE = "is not specified";
+
     private final Developer developer;
 
     public DeveloperInfo(Developer developer) {
@@ -26,9 +29,9 @@ public class DeveloperInfo {
         if (developer.getName().isEmpty()) {
             return "";
         }
-        final String email = developer.getEmail() != null ? developer.getEmail() : "is not specified";
-        final String url = developer.getUrl() != null ? developer.getUrl() : "is not specified";
-        final String organisation = developer.getOrganization() != null ? developer.getOrganization() : "is not specified";
+        final String email = developer.getEmail() != null ? developer.getEmail() : DEFAULT_FIELD_VALUE;
+        final String url = developer.getUrl() != null ? developer.getUrl() : DEFAULT_FIELD_VALUE;
+        final String organisation = developer.getOrganization() != null ? developer.getOrganization() : DEFAULT_FIELD_VALUE;
         final String roles = developer.getRoles().isEmpty() ? "are not specified" : String.join(", ", developer.getRoles());
         return String.format(DEVELOPER_INFO_TEMPLATE, developer.getName(), email, url, organisation, roles, System.lineSeparator());
     }
